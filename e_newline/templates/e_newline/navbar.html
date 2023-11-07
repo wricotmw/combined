@@ -1,0 +1,56 @@
+
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+
+
+
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'line' %}">Linedance Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'linedances' %}">Dances</a>
+        </li>
+
+        
+        
+       
+       
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admin
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'add-dance' %}">Add Dance</a></li>
+            <li><a class="dropdown-item" href="{% url 'ammend_dance' %}">Ammend Dance</a></li>
+            <li><hr class="dropdown-divider"></li>
+            {% if user.is_authenticated %}
+              <li> <a class="dropdown-item"  href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+              <li> <a class="dropdown-item"  href="{% url 'login' %}">Login</a></li>
+            {% endif %}
+            
+              
+            
+          </ul>
+        </li>
+       
+      </ul>
+      <form class="d-flex" role="search" method="POST" action="{% url 'search_dance' %}">
+        {% csrf_token %}
+        <input class="form-control me-2" type="search" placeholder="Search dances" aria-label="Search" name="searched">
+        <button class="btn btn-secondary" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>

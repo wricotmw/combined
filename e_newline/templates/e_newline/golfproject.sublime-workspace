@@ -1,0 +1,515 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"h",
+				"h1"
+			],
+			[
+				"d",
+				"d_golf"
+			],
+			[
+				"re",
+				"render"
+			],
+			[
+				"select",
+				"select_level"
+			],
+			[
+				"H",
+				"HttpResponseRedirect"
+			],
+			[
+				"Da",
+				"DancesForm"
+			],
+			[
+				"c",
+				"center"
+			],
+			[
+				"ge",
+				"generic"
+			],
+			[
+				"i",
+				"import"
+			],
+			[
+				"c_",
+				"c_round"
+			],
+			[
+				"co",
+				"columnspan"
+			],
+			[
+				"r",
+				"round_lbl"
+			],
+			[
+				"upd",
+				"update_item"
+			],
+			[
+				"new",
+				"newscore"
+			],
+			[
+				"anch",
+				"anchor"
+			],
+			[
+				"pr",
+				"print_records"
+			],
+			[
+				"tb",
+				"tblstyle"
+			],
+			[
+				"print",
+				"print_records"
+			],
+			[
+				"sco",
+				"score_frame"
+			],
+			[
+				"col",
+				"columnspan"
+			],
+			[
+				"g",
+				"g_score1"
+			],
+			[
+				"conf",
+				"configure"
+			],
+			[
+				"g_",
+				"g_score1"
+			],
+			[
+				"se",
+				"select_btn"
+			],
+			[
+				"p",
+				"padx"
+			],
+			[
+				"mess",
+				"message"
+			],
+			[
+				"la",
+				"label"
+			],
+			[
+				"top",
+				"Toplevel"
+			],
+			[
+				"Lis",
+				"Listbox"
+			],
+			[
+				"b",
+				"btn_close_top"
+			],
+			[
+				"o",
+				"order_by"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "from django.db import models\n\n# Create your models here.\n\n\n \nclass ScoreDate(models.Model):\n    score_date = models.DateField(null=True)\n\n\n\nclass Golfer(models.Model):\n\tname = models.CharField('name', max_length=120)\n\n\tdef __str__(self):\n\t\treturn self.name\n\nclass Scores(models.Model):\n\tname = models.ForeignKey(Golfer, blank= False, null = False, on_delete=models.CASCADE)\n\tscore = models.IntegerField()\n\tscore_date = models.DateTimeField()\n\t\n\tdef __str__(self):\n\t\treturn str(self.score)\n\nclass FiveScores(models.Model):\n\tname = models.ForeignKey(Golfer, blank= False, null = False, on_delete=models.CASCADE)\n\tscore1 = models.IntegerField()\n\tscore2 = models.IntegerField()\n\tscore3 = models.IntegerField()\n\tscore4 = models.IntegerField()\n\tscore5 = models.IntegerField()\n\ttotal_score = models.IntegerField()\n\n\tdef __str__(self):\n\t\treturn str(self.name)\n",
+			"file": "/C/coding/golfproject/webapp/events/models.py",
+			"file_size": 853,
+			"file_write_time": 133402246954466563,
+			"redo_stack":
+			[
+				[
+					3,
+					1,
+					"right_delete",
+					null,
+					"AQAAAJYBAAAAAAAAuQEAAAAAAAAAAAAA",
+					"CQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAJYBAAAAAAAAlgEAAAAAAAAAAAAAAADwvw"
+				]
+			],
+			"settings":
+			{
+				"buffer_size": 852,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/coding/golfproject/webapp/events/migrations/__init__.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/coding/golfproject/webapp",
+		"/C/coding/golfproject/webapp/events",
+		"/C/coding/golfproject/webapp/events/migrations",
+		"/C/coding/golfproject/webapp/events/templates",
+		"/C/coding/golfproject/webapp/events/templates/events"
+	],
+	"file_history":
+	[
+		"/C/coding/combined/base_project/e_newline/templates/e_newline/base.html",
+		"/C/coding/combined/base_project/base_project/urls.py",
+		"/C/coding/combined/base_project/base_project/settings.py",
+		"/C/coding/combined/base_project/manager/views.py",
+		"/C/coding/combined/base_project/manager/urls.py",
+		"/C/coding/combined/base_project/manager/templates/authenticate/login.html",
+		"/C/coding/combined/base_project/e_newline/templates/e_newline/video_test.html",
+		"/C/coding/combined/base_project/e_newline/templates/e_newline/search_dance.html",
+		"/C/coding/combined/base_project/e_newline/templates/e_newline/pdf_sheet.html",
+		"/C/coding/combined/base_project/e_newline/templates/e_newline/line.html",
+		"/C/coding/combined/base_project/e_newline/templates/e_newline/dance_add.html",
+		"/C/coding/combined/base_project/e_newline/templates/e_newline/ammendment.html",
+		"/C/coding/combined/base_project/e_newline/templates/e_newline/ammend_dance.html",
+		"/C/coding/combined/base_project/e_newline/templates/e_newline/all_dances.html",
+		"/C/coding/combined/base_project/e_newline/templates/e_newline/navbar.html",
+		"/C/coding/combined/base_project/e_newline/views.py",
+		"/C/coding/combined/base_project/e_newline/admin.py",
+		"/C/coding/combined/base_project/e_newline/urls.py",
+		"/C/coding/combined/base_project/e_newline/forms.py",
+		"/C/coding/combined/base_project/d_golf/admin.py",
+		"/C/coding/combined/base_project/d_golf/urls.py",
+		"/C/coding/combined/base_project/combined/templates/combined/home.html",
+		"/C/coding/combined/base_project/d_golf/templates/d_golf/base.html",
+		"/C/coding/combined/base_project/e_newline/models.py",
+		"/C/coding/combined/base_project/d_golf/migrations/0001_initial.py",
+		"/C/coding/combined/base_project/d_golf/models.py",
+		"/C/coding/combined/base_project/d_golf/views.py",
+		"/C/coding/combined/base_project/d_golf/templates/d_golf/navbar.html",
+		"/C/coding/combined/base_project/d_golf/templates/d_golf/golf.html",
+		"/C/coding/combined/base_project/combined/templates/combined/navbar.html",
+		"/C/coding/combined/base_project/combined/templates/combined/base.html",
+		"/C/coding/combined/base_project/combined/views.py",
+		"/C/coding/combined/base_project/combined/urls.py",
+		"/C/coding/newline/line_outer/manager/templates/authenticate/login.html",
+		"/C/coding/Main_Project/webapps/website/templates/home.html",
+		"/C/coding/Main_Project/webapps/website/views.py",
+		"/C/coding/Main_Project/webapps/website/urls.py",
+		"/C/coding/Main_Project/webapps/awebapps/urls.py",
+		"/C/coding/Main_Project/webapps/newline/urls.py",
+		"/C/coding/Main_Project/webapps/awebapps/settings.py",
+		"/C/coding/Main_Project/webapps/website/migrations/urls.py",
+		"/C/coding/Main_Project/webapps/db.sqlite3",
+		"/C/coding/summer_comp/five_round_base/five_round/urls.py",
+		"/C/coding/summer_comp/five_round_base/summer/views.py",
+		"/C/coding/summer_comp/five_round_base/summer/urls.py",
+		"/C/coding/summer_comp/five_round_base/summer/templates/summer/home.html",
+		"/C/coding/summer_comp/five_round_base/summer/models.py",
+		"/C/coding/newline/line_outer/alineapp/migrations/0003_alter_dances_video_id.py",
+		"/C/coding/newline/line_outer/alineapp/migrations/0004_alter_dances_video_id.py",
+		"/C/coding/newline/line_outer/alineapp/migrations/0005_alter_dances_name.py",
+		"/C/coding/newline/line_outer/alineapp/templates/alineapp/dance_add.html",
+		"/C/coding/newline/line_outer/alineapp/admin.py",
+		"/C/coding/newline/line_outer/alineapp/views.py",
+		"/C/coding/newline/line_outer/alineapp/models.py",
+		"/C/coding/newline/line_outer/alineapp/urls.py",
+		"/C/coding/newline/line_outer/alineapp/templates/alineapp/all_dances.html",
+		"/C/coding/newline/line_outer/alineapp/templates/alineapp/video_test.html",
+		"/C/coding/newline/line_outer/alineapp/templates/alineapp/navbar.html",
+		"/C/coding/newline/line_outer/forms.py",
+		"/C/coding/newline/line_outer/line/settings.py",
+		"/C/coding/newline/line_outer/alineapp/templates/alineapp/video_show.html",
+		"/C/coding/linedance/htdocs/dances.php",
+		"/C/wamp64/www/index.php",
+		"/C/coding/newline/line_outer/alineapp/templates/alineapp/dance_items.html",
+		"/C/coding/newline/line_outer/alineapp/templates/alineapp/dances.html",
+		"/C/coding/newline/line_outer/alineapp/templates/alineapp/index.html",
+		"/C/coding/newline/line_outer/alineapp/templates/alineapp/index_old.html",
+		"/C/coding/myclub/myclubsite/events/templates/events/home.html",
+		"/C/coding/myclub/myclubsite/events/views.py",
+		"/C/coding/linedance/htdocs/danceupload.html",
+		"/C/coding/polls/mysite/db.sqlite3",
+		"/C/coding/polls/virt/Lib/site-packages/django/contrib/admin/templates/admin/index.html",
+		"/C/coding/polls/virt/Lib/site-packages/django/contrib/admin/templates/admin/base_site.html",
+		"/C/coding/polls/mysite/polls/templates/polls/index.html",
+		"/C/coding/polls/mysite/polls/models.py",
+		"/C/coding/polls/mysite/mysite/settings.py",
+		"/C/coding/polls/mysite/polls/admin.py",
+		"/C/coding/polls/mysite/polls/static/polls/style.css",
+		"/C/coding/polls/mysite/polls/templates/polls/detail.html",
+		"/C/coding/polls/mysite/polls/views.py",
+		"/C/coding/polls/mysite/polls/tests.py",
+		"/C/coding/polls/mysite/mysite/wsgi.py",
+		"/C/coding/polls/mysite/polls/static.py",
+		"/C/coding/polls/mysite/polls/templates/polls/results.html",
+		"/C/coding/polls/mysite/polls/urls.py",
+		"/C/coding/eclectic/components.py",
+		"/C/coding/eclectic/list_test.py",
+		"/C/coding/eclectic/treeview.py",
+		"/C/coding/eclectic/eclectic.py",
+		"/C/coding/eclectic_work/eclectic.py",
+		"/C/coding/New_eclectic/test.txt",
+		"/C/coding/eclectic/full/full_eclectic_tables.py",
+		"/C/coding/eclectic/full_eclectic_tables.py",
+		"/C/coding/eclectic/full_eclectic.py",
+		"/C/coding/windows_app/active.py",
+		"/C/coding/windows_app/test.txt",
+		"/C/coding/windows_app/activeold.py",
+		"/C/coding/windows_experimental/golf_date.py",
+		"/C/coding/windows_app/golf_date.py",
+		"/C/golfapp/top_Golfer/create_ten.py",
+		"/C/golfapp/top_Golfer/championship.py",
+		"/C/golfapp/top_Golfer/Delete_from.py",
+		"/C/coding/golfproject/webapp/events/templates/events/navbar.html",
+		"/C/coding/golfproject/webapp/events/templates/events/base.html",
+		"/C/coding/golfproject/webapp/events/templates/events/add_golfer.html",
+		"/C/coding/structureOfProject/the_project_Outer/app2/templates/app2/base.html",
+		"/C/coding/structureOfProject/the_project_Outer/app2/templates/app2/blog.html",
+		"/C/coding/structureOfProject/the_project_Outer/common/views.py",
+		"/C/coding/structureOfProject/the_project_Outer/app1/templates/app1/home.html",
+		"/C/coding/structureOfProject/the_project_Outer/the_project/settings.py",
+		"/C/coding/structureOfProject/the_project_Outer/common/templates/common/base.html",
+		"/C/coding/structureOfProject/the_project_Outer/the_project/urls.py",
+		"/C/coding/structureOfProject/the_project_Outer/common/urls.py",
+		"/C/coding/structureOfProject/the_project_Outer/common/templates/common/urls.py",
+		"/C/coding/myclub/myclubsite/myclubsite/urls.py",
+		"/C/coding/golfproject/webapp/events/forms.py",
+		"/C/coding/golfproject/webapp/events/templates/events/add_scores.html",
+		"/C/coding/golfproject/webapp/events/models.py",
+		"/C/coding/golfproject/webapp/requirements.txt",
+		"/C/coding/golfproject/webapp/.gitignore",
+		"/C/coding/golfproject/webapp/.env",
+		"/C/coding/golfproject/webapp/webapp/settings.py",
+		"/C/coding/golfproject/webapp/Procfile",
+		"/C/coding/golfproject/webapp/events/templates/events/score_list.html",
+		"/C/coding/golfproject/webapp/events/views.py",
+		"/C/coding/golfproject/webapp/events/utils.py"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/coding/golfproject/webapp/events/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 852,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								852,
+								852
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 68.6666666667,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/coding/golfproject/webapp/events/migrations/__init__.py",
+					"selected": true,
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "golfproject.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 204.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

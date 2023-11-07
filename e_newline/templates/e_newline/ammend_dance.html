@@ -1,0 +1,33 @@
+{% extends 'e_newline/base.html' %}
+
+{% block content %}
+
+	{% if searched %}
+
+	<h1> Dance to ammend...{{ searched }}</h1>
+
+	{% for dances in dance_result %}
+
+
+		
+
+			{{ dances }} -- <a  href="{% url 'ammendment'  dances.id %}">Ammend</a><br>
+
+		
+	
+		
+	{% endfor %}
+	
+	{% else %}
+
+	<form class="d-flex" role="search" method="POST" action="{% url 'ammend_dance' %}">
+        {% csrf_token %}
+        <input class="form-control me-2" type="search" placeholder="Search dances" aria-label="Search" name="searched">
+        <button class="btn btn-secondary" type="submit">ammend</button>
+      </form>
+
+
+	{% endif %}
+
+
+{% endblock %} -- 

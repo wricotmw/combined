@@ -1,0 +1,21 @@
+{% extends 'e_newline/base.html' %}
+{% block content %}
+
+{% if user.is_authenticated %}
+	<center>
+		<h1>Ammend Dance....{{ result }}</h1>
+		<br>
+		<form action = "" method=POST> 
+		{% csrf_token %}
+		{{ form.as_p}}
+		<br>
+		<input type="submit" value="update" class = "btn btn-secondary">
+
+	
+{% else %}
+
+		<h1>Sorry You mst be logged in to see this page!</h1>
+
+{% endif %}
+</center>
+{% endblock %}

@@ -1,0 +1,127 @@
+{% extends 'e_newline/base.html' %}
+
+{% block content %}
+
+
+<table  border="2" cellpadding="2" cellspacing="0" width="100%">
+<tr>
+	<td>Beginner</td>
+	<td>Improver</td>
+	<td>Intermediate</td>
+</tr>
+<tr>
+	<td valign="top">
+				
+				<!--  Table for Beginner dances -->
+				<table border="1" cellspacing="2" cellpadding="2">						
+						
+						{% for i in beg_list %}
+					<tr>					      
+						<td>{{ i.name  }}</td>
+
+						{% if i.video_id != '' %}
+
+							<td><a  href="{% url 'video_test'   i.video_id i.name %}">Video</a></td>
+
+						{% else %}
+							<td> none </td>
+						{% endif%}	
+
+					</tr>
+						{% endfor %}
+												
+												
+						 
+						
+						<!--<td><font face="Arial, Helvetica, sans-serif">f2</font></td>
+						<td><font face="Arial, Helvetica, sans-serif">f3</font></td>
+						
+						-->
+						
+						
+					
+				</table>	
+	
+	
+	
+	</td>
+	<td valign="top">
+	<!-- Second query -->
+	       <!-- Table for Improver dances -->
+				<table border="1" cellspacing="2" cellpadding="2">
+						
+						
+						
+					{% for i in imp_list %}
+					<tr>					      
+						<td>{{ i.name  }}</td>
+
+						{% if i.video_id != '' %}
+
+							<td><a  href="{% url 'video_test'   i.video_id i.name %}">Video</a></td>
+
+						{% else %}
+							<td> none </td>
+						{% endif%}	
+
+					</tr>
+					{% endfor %}
+						
+						
+						
+						<!--<td><font face="Arial, Helvetica, sans-serif"><?php echo $f4; ?></font></td>-->
+						
+						</tr>
+						
+						
+				</table>
+	
+	<!-- Second query end -->
+	</td>
+	<td valign="top">
+	<!-- Third Query -->
+	
+	
+	
+	
+	   <!-- Table for Intermediate dances -->
+	
+				<table border="1" cellspacing="2" cellpadding="2">
+						
+						
+						
+					{% for i in int_list %}
+					<tr>					      
+						<td>{{ i.name  }}</td>
+
+						{% if i.video_id != '' %}
+
+							<td><a  href="{% url 'video_test'   i.video_id i.name %}">Video</a></td>
+
+						{% else %}
+							<td> none </td>
+						{% endif%}	
+
+					</tr>
+					{% endfor %}
+						
+						
+						
+						<!--<td><font face="Arial, Helvetica, sans-serif"><?php echo $f4; ?></font></td>-->
+						
+						</tr>
+						
+						
+				</table>
+	
+	
+	
+	
+<!-- Third Query End -->	
+	
+	
+	</td>
+</tr>
+</table>
+
+{% endblock %}

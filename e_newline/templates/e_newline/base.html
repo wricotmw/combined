@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>linedance demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+
+
+    <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    </style>
+
+    <table border="1" cellpadding="1" cellspacing="0" width="90%">
+    <tr>
+      <td align="center" bgcolor="#ccffff" height="90" valign="middle" border="1"
+        width="111">{% load static %} <img src="{% static 'e_newline/images/dancers.gif' %}" alt="dancers" border="1" height="75" width="80" >
+        
+          
+      </td>
+      <td style="width: 699px;" bgcolor="#ccffff" height="90" valign="middle" border="2">
+        <div style="text-align: center;">
+        </div>
+
+        <blockquote>
+          <h1 style="text-align: center;font-size: 44pt"><font
+          face="Script MT Bold" size="7">T J's Linedancers</font></h1>
+        </blockquote>
+        {% include 'e_newline/navbar.html' %}
+        </div>
+
+
+        
+          
+       </td>
+    </tr>
+    <tr>
+      <td bgcolor="#ccffff" height="253" valign="top" width="111"
+  
+        align="center" bgcolor="#ccffff" height="90" valign="middle"
+        width="111">      
+        
+      {% block latest %}   
+      {% endblock %} 
+            </br>   
+                 
+      </td>
+      <td>
+
+          {% if messages %}
+            {% for message in messages %}
+
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>{{ message }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+
+              
+
+            {% endfor %}
+
+          {% endif %}
+          {% block content %}
+          {% endblock %}
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="#ccffff" width="111"><font size="1"></font></td>
+      <td style="width: 654px;"> </td>
+      <!-- <td style="width: 106px;">&nbsp;</td> -->
+    </tr>
+</table>
+
+    <footer>
+      
+      <a href="{% url 'line' %}">Home....</a>
+      <a href="{% url 'linedances' %}">Dances....</a>
+
+      <small>Copyright &copy; Terry Wright 2022</small><br>
+      
+              <script language="JavaScript"><!--
+                 var name = "terrymw";
+                 var domain = "wrico.co.uk";
+                 document.write('<a href=\"mailto:' + name + '@' + domain + '\">');
+                 document.write('Contact Us</a>');
+                 // -->
+                 </script>
+
+    </footer>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+
+
+
+
+
+
+
+  
+</html>

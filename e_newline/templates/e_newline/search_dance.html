@@ -1,0 +1,55 @@
+{% extends 'e_newline/base.html' %}
+
+{% block content %}
+
+	{% if searched %}
+
+	<h1> You searched for...{{ searched }}</h1>
+	<table>
+
+	{% for dances in dance_result %}
+		<tr>
+		{% if dances.video_id != '' %}
+			
+			<td width="250">{{ dances }} </td>
+			<td width="150"><a  href="{% url 'video_test'   dances.video_id dances.name %}">Video</a></td>
+			<td width="150"> 
+			{% if dances.steps != '' %}
+				<a  href="{{ dances.steps}}">Steps</a></td>
+			{% else %}
+				 no stepsheet
+			{% endif %}
+			</td>
+			
+
+		{% else %}
+
+			<td width="250">{{ dances }} </td> 
+			<td width="150">No Video</td>
+			<td width="150">
+
+			{% if dances.steps != '' %}
+				<a  href="{{ dances.steps}}">Steps</a>
+			{% else %}
+				 no stepsheet
+			{% endif %}
+			</td>
+
+
+
+			
+		{% endif%}	
+	
+		</tr>
+	{% endfor %}
+	</table>
+	{% else %}
+
+	<h1> You did not enter the search details...</h1>
+	
+
+
+	{% endif %}
+
+
+{% endblock %}
